@@ -34,6 +34,7 @@ if ( $a === 10 ) {
 // utilizando spaceship
 $numeros = [5, 2, 9, 1, 7];
 
+// usort é uma função que serve pra ordenar arrays indexados, ou seja, listas simples com índices numéricos
 // Ordena o array do menor para o maior usando o spaceship operator
 usort($numeros, function($a, $b) {
     return $a <=> $b;
