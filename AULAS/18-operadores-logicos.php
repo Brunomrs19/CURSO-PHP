@@ -32,6 +32,6 @@ if (( $idade == 23) xor ( $nome == "Maria" )) {
 
 // negaçao
 if (!( $idade == 25) and ( $nome = "Bruno")) {
-    echo "Olá, Bruno";
+    echo "Olá, admin.";
 };
 
