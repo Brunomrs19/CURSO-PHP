@@ -1,6 +1,6 @@
 # 💻 Portfólio de PHP – Aprendizado e Git
 
-Este portfólio reúne **exercícios e projetos de PHP** desenvolvidos durante o curso, com o objetivo de treinar a linguagem, praticar **PHP procedural detalhadamente** e aprender a utilizar **Git** para versionamento de código.
+Este portfólio reúne **exercícios e aulas de PHP** desenvolvidos durante o curso, com o objetivo de treinar a linguagem, praticar **PHP procedural detalhadamente** e aprender a utilizar **Git** para versionamento de código.
 
 ---
 
