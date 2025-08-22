@@ -20,19 +20,15 @@ if(isset($_POST["btn-enviar"])) {
 
     //validando
     if(!$idade = filter_input(INPUT_POST, "idade", FILTER_VALIDATE_INT)) {
-        echo "Precisa ser um número inteiro <br>";
-    };
+        $erros[] = "Precisa ser um número inteiro <br>";
+    }
 
     if(!$peso = filter_input(INPUT_POST, "peso", FILTER_VALIDATE_FLOAT)) {
-        echo "Precisa ser numero quebrado <br>";
+        $erros[] = "Precisa ser numero quebrado <br>";
     };
 
     if(!$ip = filter_input(INPUT_POST, "ip", FILTER_VALIDATE_IP)) {
-        echo " ip Inválido <br>";
-    };
-
-    if(!$url = filter_input(INPUT_POST, "url", FILTER_VALIDATE_IP)) {
-        echo "url inválida <br>";
+        $erros[] = " ip Inválido <br>";
     };
 
     //exibindo msg
@@ -40,7 +36,9 @@ if(isset($_POST["btn-enviar"])) {
     if(empty($erros)) {
         echo "Parabéns, tudo correto";
     } else {
-        echo "Verifique qual foi o erro";
+        foreach ($erros as $indices) {
+            echo $indices;
+        };
     };
 
 
@@ -55,7 +53,6 @@ if(isset($_POST["btn-enviar"])) {
     Idade: <input type="text" name="idade"><br>
     Peso: <input type="text" name="peso"><br>
     IP: <input type="text" name="ip"><br>
-    URL: <input type="text" name="url"><br>
     <button type="submit" name="btn-enviar"> Enviar </button>
 </form>
 
