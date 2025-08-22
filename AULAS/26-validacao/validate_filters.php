@@ -21,7 +21,7 @@ if(isset($_POST["btn-enviar"])) {
     //validando
     if(!$idade = filter_input(INPUT_POST, "idade", FILTER_VALIDATE_INT)) {
         $erros[] = "Precisa ser um número inteiro <br>";
-    }
+    };
 
     if(!$peso = filter_input(INPUT_POST, "peso", FILTER_VALIDATE_FLOAT)) {
         $erros[] = "Precisa ser numero quebrado <br>";
