@@ -14,6 +14,7 @@ sem usar classes ou objetos.
 if(isset($_POST['entrar'])) {
     $erros = [];
     //necessário filtrar os dados, então usa a função.
+    //pois, hackers podem apagar tabelas, verificar lista completa, nunca confiar na segurança dos softwares.
     $login = mysqli_escape_string($connect, $_POST['usuario']);
     $senha = mysqli_escape_string($connect, $_POST['senha']);
 
@@ -21,7 +22,7 @@ if(isset($_POST['entrar'])) {
         $erros[] = "O campo login/senha está vázio.<br>";
     } else {
         $sql = "SELECT login FROM usuarios WHERE login = '$login'";
-        $resultado = mysqli_query($connect, $sql); //vai armazenar o resultado dessa busca na variavel
+        $resultado = mysqli_query($connect, $sql); //vai armazenar o resultado dessa busca na variavel $resultado.
 
         if( mysqli_num_rows($resultado) > 0 ) {
             $senha = md5($senha); //como utilizamos a criptografia md5 no db, então antes de inserir no sql precisamos criptografar
